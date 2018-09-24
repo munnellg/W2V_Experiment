@@ -27,7 +27,7 @@ if __name__ == '__main__':
     inp, output = sys.argv[1:3]
     
     # train word2vec on the input file
-    model = Word2Vec(LineSentence(inp), size=20, window=5, min_count=10,
+    model = Word2Vec(LineSentence(inp), size=200, window=10, min_count=10,
             workers=multiprocessing.cpu_count(), sample= 1E-3)
     
     # save word2vec to the output file
